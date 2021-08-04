@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="northCenterTemplate" template="/WEB-INF/jsp/northCenter.jsp">
+        <put-attribute name="north-content" value="/WEB-INF/jsp/north.jsp" />
+        <put-attribute name="center-content" value="" />
+    </definition>
+
+    <definition name="unrelatedAA-tile" extends="northCenterTemplate">
+        <put-attribute name="center-content" value="/WEB-INF/jsp/deviceSearch.jsp" />
+    </definition>
+    <definition name="unrelatedAB-tile" extends="northCenterTemplate">
+        <put-attribute name="center-content" value="/WEB-INF/jsp/deviceWhatever.jsp" />
+    </definition>
+    <definition name="unrelatedAC-tile" extends="northCenterTemplate">
+        <put-attribute name="center-content" value="/WEB-INF/jsp/deviceAnother.jsp" />
+    </definition>
+
+    <definition name="viewA" template="/WEB-INF/jsp/deviceDetails.jsp" />
+
+</tiles-definitions>
